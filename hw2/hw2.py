@@ -11,11 +11,11 @@ age = int(input("Please, enter your age:  "))
 
 if age % 11 == 0:
     print("What an interesting age!")
-elif age <= 7:
+elif age < 7:
     print("Where are your parents?")
-elif age <= 16:
+elif age < 16:
     print("This is a movie for adults!")
-elif age >= 65:
+elif age > 65:
     print("Show your pension certificate!")
 else:
     print("And there are no more tickets!")
