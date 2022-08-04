@@ -9,7 +9,8 @@
 # в секундах і задекоруйте ним основну функцію гри. Після закінчення гри декоратор
 # має сповістити, скільки тривала гра.
 
-from hw9.functions import *
+# from hw9.functions import g
+from hw9.functions import get_attempts, get_random_number, get_number_from_user, show_hint, check_numbers, duration
 
 
 @duration
@@ -27,4 +28,5 @@ def game():
         print('You lost')
 
 
-game()
+if __name__ == '__main__':
+    game()
