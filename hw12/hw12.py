@@ -33,6 +33,9 @@ class Point:
         self.x = x_coord
         self.y = y_coord
 
+    def __str__(self):
+        return f"{self.__class__.__name__}({self.x},{self.y})"
+
 
 point1 = Point(0, 3)
 point2 = Point(4, 0)
@@ -129,7 +132,18 @@ class Triangle:
         s = (ab + bc + ca)/2
         return (s * (s - ab) * (s - bc) * (s - ca)) ** 0.5
 
+    def __eq__(self, other):
+        return self.square == other.square
+
+    def __gt__(self, other):
+        return self.square > other.square
+
+    def __ge__(self, other):
+        return self.square >= other.square
+
+    def __str__(self):
+        return f"({self.a} {self.b} {self.c})"
+
 
 triangle = Triangle(point1, point2, point3)
-print(triangle.square)
-
+print(triangle)
